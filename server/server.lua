@@ -1,4 +1,4 @@
-RegisterCommand('teleport', function(source, args)
+RegisterCommand('teleport', function(source, args) -- 'teleport' you must put in the chat to teleport. Example: /teleport 123 456 789.
     if source == 0 then
         print('Tento příkaz může spustit pouze hráč.')
         return
@@ -14,7 +14,7 @@ RegisterCommand('teleport', function(source, args)
     TriggerClientEvent('teleportPlayer', source, x, y, z)
 end)
 
-RegisterCommand('kostka', function(source)
+RegisterCommand('cube', function(source) -- 'cube' is command in the chat to trigger random cube number.
     if source == 0 then
         print('Tento příkaz může spustit pouze hráč.')
         return
@@ -23,7 +23,7 @@ RegisterCommand('kostka', function(source)
     TriggerClientEvent('chat:addMessage', source, { args = { '^5Číslo: ', number } })
 end)
 
-RegisterCommand('mince', function(source)
+RegisterCommand('coin', function(source) -- 'coin' is command in the chat to trigger coin flip.
     if source == 0 then
         print('Tento příkaz může spustit pouze hráč.')
         return
